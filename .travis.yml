@@ -2,6 +2,7 @@ language: rust
 rust: nightly
 script:
   - cargo build --verbose
+  - cargo rustc --target x86_64-unknown-nepheliad -- -Z no-landing-pads
   - cargo test --verbose
   - cargo doc
 notifications:
